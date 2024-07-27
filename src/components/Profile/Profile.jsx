@@ -1,5 +1,4 @@
-
-
+import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import css from './Profile.module.css'; 
 
@@ -16,7 +15,7 @@ const Profile = ({ name, tag, location, image, stats }) => {
             <span className={css.statsLabel}>Followers</span>
             <span className={css.statsValue}>{stats.followers}</span>
         </div>
-        <div className={css.statsItem}>
+        <div className={clsx(css.statsItem, css.borderStatsItem)}>
             <span className={css.statsLabel}>Views</span>
             <span className={css.statsValue}>{stats.views}</span>
         </div>
